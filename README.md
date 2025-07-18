@@ -34,7 +34,7 @@ Although KNN achieved the highest recall 98.50%, Random Forest provided a better
 ### Feature Importance 
 ![Feature Importance](images/feature_importance.png)
 
-### Model Accuracy Comparison
+### Model Performance Comparison
 ![Accuracy Bar Chart](images/model_accuracy.png)
 
 ### ROC Curve for Model Comparison
