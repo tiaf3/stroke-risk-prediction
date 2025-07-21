@@ -1,67 +1,91 @@
 # Stroke Risk Prediction using Machine Learning
 
-This project builds a machine learning pipeline that predicts stroke risk using clinical and lifestyle features, Achieved  **97% accuracy** with the **Random Forest** model.
+This project builds a robust machine learning pipeline to **predict stroke risk** based on clinical and lifestyle features.  
+Achieved up to **97% accuracy** using **Random Forest** classifier.
 
 ---
 
 ## Tools & Libraries
-- **Python**: Pandas, Scikit-learn
-- **Data preprocessing**: imputation, encoding, SMOTE
-- **Models**: Logistic Regression, K-Nearest Neighbors, Random Forest
-- **Evaluation**: Accuracy, Precision, Recall, F1-Score, ROC Curve
-- **Visualization**: Matplotlib, Seaborn
+
+- **Language**: Python  
+- **Libraries**: Pandas, Scikit-learn, Matplotlib, Seaborn  
+- **Models Used**:
+  - Logistic Regression
+  - K-Nearest Neighbors (KNN)
+  - Random Forest  
+- **Preprocessing**:
+  - Missing value imputation
+  - Label encoding
+  - SMOTE for class balancing  
+- **Evaluation**: Accuracy, Precision, Recall, F1, ROC Curve
 
 ---
 
-## Project Steps
-1. Data cleaning and missing value imputation
-2. Label encoding of categorical variables
-3. Split data into training and test sets (70/30)
-4. Handled class imbalance using SMOTE
-5. Trained and evaluated models:
-   - Logistic Regression
-   - Random Forest
-   - K-Nearest Neighbors (KNN)
-6. Visualized results using bar plots and ROC curves
+## Pipeline Overview
+
+1. Data cleaning and imputation
+2. Categorical encoding
+3. Train-test split (70/30)
+4. Class balancing with **SMOTE**
+5. Model training & evaluation
+6. Result visualization and comparison
 
 ---
 
 ## Results
-- Best model: Random Forest  
-- Accuracy: `96.64%`
-- F1-score: `96.59%`
-- Key predictive features: **Age**, **Hypertension**, **Smoking Status**
 
-Random Forest consistently outperformed other models in accuracy and F1-score, making it the most reliable choice overall.  
-Although KNN achieved the highest recall 98.50%, Random Forest provided a better balance between precision and recall, along with clearer feature importance-critical for medical decision-making.
+| Model               | Accuracy | Precision | Recall     | F1 Score |
+|---------------------|----------|-----------|------------|----------|
+| Random Forest       | 96.64%   | **98.58%**| 94.68%     | **96.59%** |
+| K-Nearest Neighbors | 92.84%   | 88.54%    | **98.50%** | 93.26%   |
+| Logistic Regression | 77.99%   | 76.63%    | 80.91%     | 78.71%   |
+
+- **Top Features**: Age, Hypertension, Smoking Status
+
+> While **K-Nearest Neighbors** achieved the highest recall (98.5%), its lower precision reduced its overall F1-score.  
+> **Random Forest** offered the most balanced performance across all metrics, with excellent precision (98.58%) and high recall, making it the most reliable model overall—especially for medical applications where both false positives and false negatives matter.  
+> **Logistic Regression**, while significantly simpler, served as a good baseline but lacked the capacity to capture complex patterns in the data.
 
 ---
 
 ## Key Visualizations
 
-### 🔹 Feature Importance 
-![Feature Importance](images/feature_importance.png)
+### 🔹 Feature Importance  
+<img src="images/feature_importance.png" width="600"/>
 
-### 🔹 Model Performance Comparison
-![Accuracy Bar Chart](images/model_accuracy.png)
+### 🔹 Accuracy Comparison  
+<img src="images/model_accuracy.png" width="600"/>
 
-### 🔹 ROC Curve for Model Comparison
-![ROC Curve](images/roc_curve.png)
+### 🔹 ROC Curve  
+<img src="images/roc_curve.png" width="600"/>
 
 ---
 
 ## Dataset
-The data was taken from the [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset).
+
+Data was obtained from the [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset).
 
 ---
 
 ## How to Run
-1. Clone the repository: `git clone https://github.com/tiaf3/stroke_risk_prediction.git`
-2. Download the dataset from Kaggle and place the CSV file inside the data/ folder.
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the script: `python stroke_prediction.py`
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/tiaf3/stroke_risk_prediction.git
+   ```
+2. Place the dataset CSV file inside the `data/` folder  
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the script:
+   ```bash
+   python stroke_prediction.py
+   ```
 
 ---
 
-## Project Status
-Completed - Academic project and portfolio showcase
+## Status
+
+✅ **Completed** – Academic/portfolio project  
+Demonstrates strong ML pipeline design, performance tuning, and interpretability.
