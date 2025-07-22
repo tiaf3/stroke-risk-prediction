@@ -43,7 +43,6 @@ Achieved up to **97% accuracy** using **Random Forest** classifier.
 - **Top Features**: Age, Hypertension, Smoking Status
 
 > **K-Nearest Neighbors** achieved the highest recall (98.5%), which is crucial for detecting most true stroke cases. However, its lower precision led to more false positives, reducing its overall F1-score.
-> 
 > **Random Forest** offered the best balance, with excellent precision (98.58%) and high recall (94.68%), making it the most reliable model overall—especially in medical settings where both false positives and false negatives have significant consequences.   
 > **Logistic Regression**, while simpler and easier to interpret, served as a useful baseline but was less effective at capturing the complex patterns in the data.
 
